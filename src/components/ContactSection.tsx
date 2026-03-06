@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -11,7 +11,7 @@ const ContactSection = () => {
           <div className="w-16 h-0.5 bg-accent mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
           <div className="flex flex-col items-center text-center p-6">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
               <Phone className="w-5 h-5 text-primary-foreground" />
@@ -22,19 +22,6 @@ const ContactSection = () => {
               className="text-muted-foreground hover:text-accent transition-colors text-sm"
             >
               +55 16 99962-5009
-            </a>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
-              <Mail className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2 font-sans">E-mail</h3>
-            <a
-              href="mailto:contato@ibapoio.com.br"
-              className="text-muted-foreground hover:text-accent transition-colors text-sm"
-            >
-              contato@ibapoio.com.br
             </a>
           </div>
 
@@ -51,6 +38,19 @@ const ContactSection = () => {
               89219-166, Brasil
             </p>
           </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-md border border-border">
+          <iframe
+            title="Localização IB Apoio Administrativo"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.!2d-48.8487!3d-26.3044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+Francisco+Salfer%2C+63+-+Costa+e+Silva%2C+Joinville+-+SC%2C+89219-166!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

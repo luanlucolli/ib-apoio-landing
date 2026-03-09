@@ -11,8 +11,8 @@ const AboutSection = () => {
             A <strong className="text-foreground">IB Apoio Administrativo</strong> oferece 
             suporte administrativo robusto e confiável para empresas que desejam 
             otimizar suas operações. Com foco em eficiência e organização, garantimos 
-            que nossos clientes possam se concentrar no que realmente importa — o 
-            crescimento do seu negócio — enquanto nós cuidamos de toda a parte 
+            que nossos clientes possam se concentrar no que realmente importa, o 
+            crescimento do seu negócio, enquanto nós cuidamos de toda a parte 
             operacional e administrativa com segurança e excelência.
           </p>
         </div>

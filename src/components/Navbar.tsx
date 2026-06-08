@@ -18,9 +18,20 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between h-16">
-        <span className="text-primary-foreground font-semibold tracking-tight text-lg">
-          IB Apoio
-        </span>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-3"
+          aria-label="IB Apoio"
+        >
+          <img
+            src="/ibapoiologo.svg"
+            alt="Logo IB Apoio"
+            className="h-9 w-auto shrink-0"
+          />
+          <span className="text-primary-foreground font-semibold tracking-tight text-lg">
+            IB Apoio
+          </span>
+        </button>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-8">

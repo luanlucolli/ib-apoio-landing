@@ -16,8 +16,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-white/10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between h-20">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-3"
@@ -26,20 +26,19 @@ const Navbar = () => {
           <img
             src="/ibapoiologo.svg"
             alt="Logo IB Apoio"
-            className="h-9 w-auto shrink-0"
+            className="h-8 w-auto shrink-0 brightness-0 invert"
           />
-          <span className="text-primary-foreground font-semibold tracking-tight text-lg">
+          <span className="text-white font-semibold tracking-tight text-lg">
             IB Apoio
           </span>
         </button>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-10">
           {links.map((l) => (
             <li key={l.href}>
               <button
                 onClick={() => handleClick(l.href)}
-                className="text-primary-foreground/75 hover:text-primary-foreground text-sm font-medium transition-colors"
+                className="text-white/70 hover:text-white text-sm font-medium transition-colors"
               >
                 {l.label}
               </button>
@@ -47,24 +46,22 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-white"
           aria-label="Menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/10 pb-4">
+        <div className="md:hidden bg-primary border-t border-white/10 pb-4">
           {links.map((l) => (
             <button
               key={l.href}
               onClick={() => handleClick(l.href)}
-              className="block w-full text-left px-6 py-3 text-primary-foreground/75 hover:text-primary-foreground text-sm font-medium transition-colors"
+              className="block w-full text-left px-6 py-4 text-white/70 hover:text-white hover:bg-white/5 text-sm font-medium transition-colors"
             >
               {l.label}
             </button>

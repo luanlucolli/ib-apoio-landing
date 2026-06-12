@@ -1,93 +1,87 @@
+import { ArrowRight, CheckCircle2, BarChart3, FileText } from "lucide-react";
+
 const HeroSection = () => {
   const scrollToContact = () => {
     document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-primary overflow-hidden">
-      {/* Background base */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.10),transparent_28%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_45%)]" />
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-primary overflow-hidden">
+      {/* grade de fundo sutil */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]" />
+      
+      {/* brilho sutil para quebrar o fundo chapado */}
+      <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* Decorative grid */}
-      <div
-        className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px)",
-          backgroundSize: "72px 72px",
-        }}
-      />
-
-      {/* Large abstract shapes */}
-      <div className="absolute -top-32 -right-28 w-[420px] h-[420px] rounded-full border border-primary-foreground/10" />
-      <div className="absolute -top-20 -right-12 w-[280px] h-[280px] rounded-full border border-primary-foreground/10" />
-      <div className="absolute bottom-[-120px] left-[-100px] w-[360px] h-[360px] rounded-full border border-primary-foreground/10" />
-
-      {/* Accent lines */}
-      <div className="absolute right-0 top-24 hidden lg:block w-[38%] h-px bg-gradient-to-l from-accent/70 via-primary-foreground/15 to-transparent" />
-      <div className="absolute right-20 top-40 hidden lg:block w-[28%] h-px bg-gradient-to-l from-primary-foreground/25 to-transparent" />
-      <div className="absolute left-0 bottom-28 hidden md:block w-[32%] h-px bg-gradient-to-r from-accent/60 via-primary-foreground/10 to-transparent" />
-
-      {/* Floating administrative cards */}
-      <div className="absolute right-12 top-1/2 hidden xl:block w-64 -translate-y-1/2 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5 backdrop-blur-sm">
-        <div className="mb-4 flex items-center gap-3">
-          <div className="h-9 w-9 rounded-lg bg-accent/90" />
-          <div>
-            <div className="h-2.5 w-24 rounded-full bg-primary-foreground/30" />
-            <div className="mt-2 h-2 w-16 rounded-full bg-primary-foreground/15" />
-          </div>
-        </div>
-
-        <div className="space-y-3">
-          <div className="h-2.5 w-full rounded-full bg-primary-foreground/15" />
-          <div className="h-2.5 w-5/6 rounded-full bg-primary-foreground/15" />
-          <div className="h-2.5 w-2/3 rounded-full bg-primary-foreground/15" />
-        </div>
-
-        <div className="mt-5 grid grid-cols-3 gap-2">
-          <div className="h-14 rounded-lg bg-primary-foreground/[0.06]" />
-          <div className="h-14 rounded-lg bg-primary-foreground/[0.09]" />
-          <div className="h-14 rounded-lg bg-accent/20" />
-        </div>
-      </div>
-
-      <div className="absolute right-[28%] bottom-24 hidden lg:block rounded-full border border-accent/40 bg-accent/10 px-5 py-2 text-xs font-medium uppercase tracking-[0.25em] text-primary-foreground/70 backdrop-blur-sm">
-        Processos
-      </div>
-
-      <div className="absolute right-[18%] top-28 hidden lg:flex items-center gap-2 rounded-full border border-primary-foreground/10 bg-primary-foreground/[0.04] px-4 py-2 text-xs text-primary-foreground/65 backdrop-blur-sm">
-        <span className="h-2 w-2 rounded-full bg-accent" />
-        Organização operacional
-      </div>
-
-      {/* Content */}
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-        <div className="max-w-3xl">
-          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-6 animate-fade-in-up">
-            Apoio Administrativo Especializado
-          </p>
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-white/5 border border-white/10 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+              <span className="text-white/70 text-xs font-medium tracking-[0.15em] uppercase">
+                Apoio Administrativo Especializado
+              </span>
+            </div>
 
-          <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            IB Apoio Administrativo
-          </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+              Eficiência e segurança para a <span className="text-white/60">gestão do seu negócio.</span>
+            </h1>
 
-          <p
-            className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed mb-10 max-w-2xl animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            Eficiência, segurança e organização para a gestão do seu negócio.
-          </p>
+            <p className="text-lg text-white/70 leading-relaxed mb-10 max-w-xl font-light">
+              Garantimos que você possa se concentrar no crescimento da sua empresa, 
+              enquanto cuidamos de toda a operação administrativa com excelência.
+            </p>
 
-          <button
-            onClick={scrollToContact}
-            className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-medium rounded-md hover:bg-accent/90 transition-colors duration-200 animate-fade-in-up shadow-lg shadow-black/10"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Entre em Contato
-          </button>
+            <button
+              onClick={scrollToContact}
+              className="group inline-flex items-center gap-3 px-7 py-3.5 bg-white text-primary font-medium text-sm hover:bg-gray-100 transition-all duration-300"
+            >
+              Entrar em Contato
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+
+          {/* composição visual lado direito */}
+          <div className="relative hidden lg:block h-[480px]">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-[420px]">
+              <div className="flex flex-col gap-4">
+                
+                {/* card 1 */}
+                <div className="bg-primary border border-white/10 rounded-xl p-5 flex items-start gap-4 shadow-2xl shadow-black/50 transform transition-transform hover:-translate-y-1 relative z-30">
+                  <div className="p-3 rounded-lg bg-white/5 shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-white/80" />
+                  </div>
+                  <div>
+                    <h3 className="text-white text-sm font-medium mb-1">Processos Otimizados</h3>
+                    <p className="text-white/50 text-xs leading-relaxed">Fluxos de trabalho mapeados e padronizados para máxima eficiência.</p>
+                  </div>
+                </div>
+
+                {/* card 2 */}
+                <div className="bg-primary/95 backdrop-blur-md border border-white/10 rounded-xl p-5 flex items-start gap-4 shadow-2xl shadow-black/50 transform transition-transform hover:-translate-y-1 ml-12 relative z-20">
+                  <div className="p-3 rounded-lg bg-white/5 shrink-0">
+                    <BarChart3 className="w-5 h-5 text-white/80" />
+                  </div>
+                  <div>
+                    <h3 className="text-white text-sm font-medium mb-1">Gestão Transparente</h3>
+                    <p className="text-white/50 text-xs leading-relaxed">Acompanhamento contínuo e rastreabilidade total das operações.</p>
+                  </div>
+                </div>
+
+                {/* card 3 */}
+                <div className="bg-primary/90 backdrop-blur-sm border border-white/10 rounded-xl p-5 flex items-start gap-4 shadow-2xl shadow-black/50 transform transition-transform hover:-translate-y-1 mr-12 relative z-10">
+                  <div className="p-3 rounded-lg bg-white/5 shrink-0">
+                    <FileText className="w-5 h-5 text-white/80" />
+                  </div>
+                  <div>
+                    <h3 className="text-white text-sm font-medium mb-1">Controle Documental</h3>
+                    <p className="text-white/50 text-xs leading-relaxed">Organização impecável do acervo físico e digital da sua empresa.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
